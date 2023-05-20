@@ -27,11 +27,24 @@ def get_avg_salary(salary_from, salary_to):
         return (salary_from + salary_to) / 2
 
 
+def get_vac_proc_and_avg_salaries(salaries):
+    data_with_salary = list(filter(lambda x: x is not None, salaries))
+
+    vacancies_processed = len(data_with_salary)
+    if vacancies_processed:
+        avg_salary = int(sum(data_with_salary) // vacancies_processed)
+    else:
+        avg_salary = 0
+
+    return vacancies_processed, avg_salary
+
+
 def get_table(title, lang_stat):
-    table_data = [
+    table_headers = [
         ['Язык программирования', 'Найдено вакансий', 'Обработано вакансий', 'Средняя зарплата']
     ]
     for lang in lang_stat:
-        table_data.append(lang)
-    table_instance = AsciiTable(table_data, title)
+        table_headers.append(lang)
+    table_instance = AsciiTable(table_headers, title)
+
     return table_instance.table

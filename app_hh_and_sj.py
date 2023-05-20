@@ -30,13 +30,7 @@ def get_statistics_sj(sj_secret_key, language, page=0):
         page += 1
         more = response['more']
 
-    is_salaries = list(filter(lambda x: x is not None, salaries))
-    vacancies_processed = len(is_salaries)
-
-    if vacancies_processed:
-        avg_salary = int(sum(is_salaries) // vacancies_processed)
-    else:
-        avg_salary = 0
+    vacancies_processed, avg_salary = all_func.get_vac_proc_and_avg_salaries(salaries)
 
     return [language, vacancies_found, vacancies_processed, avg_salary]
 
@@ -66,13 +60,7 @@ def get_statistics_hh(language, page=0):
 
         page += 1
 
-    is_salaries = list(filter(lambda x: x is not None, salaries))
-
-    vacancies_processed = len(is_salaries)
-    if vacancies_processed:
-        avg_salary = int(sum(is_salaries) // vacancies_processed)
-    else:
-        avg_salary = 0
+    vacancies_processed, avg_salary = all_func.get_vac_proc_and_avg_salaries(salaries)
 
     return [language, vacancies_found, vacancies_processed, avg_salary]
 
