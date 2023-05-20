@@ -30,7 +30,8 @@ pip install -r requirements.txt
 ```bash
 $ python hhru.py
 ```
-![img](https://github.com/Forluc/proj-delete-/assets/75582238/d34b6ee1-adec-4937-bc47-03fb86e29954)
+![img](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/e8c075bb-2c70-46cd-ba01-ecfb9d39b121)
+
 
 Пример для отображения статистики для SuperJob.ru:
 
@@ -38,14 +39,15 @@ $ python hhru.py
 $ python sj.py
 ```
 
-![img_1](https://github.com/Forluc/proj-delete-/assets/75582238/6eb9ada9-44a8-4a12-a023-3e9936b98674)
+![img_1](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/741b3599-6d99-4982-b65c-bc04bf0f3402)
 
 Пример для отображения общей статистики:
 
 ```bash
 $ python app_hh_and_sj.py
 ```
-![img_3](https://github.com/Forluc/proj-delete-/assets/75582238/be6ed6f1-5f82-4360-a0cb-ee56a786e036)
+
+![img_3](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/a1fd39b9-027b-495f-9c0e-6ecc4876f602)
 
 ## Цель проекта
 Код был написан для удобства просмотра статистики вакансий HH.ru и SuperJob.ru
