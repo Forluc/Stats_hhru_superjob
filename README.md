@@ -25,22 +25,6 @@ pip install -r requirements.txt
 
 #### Запуск на Linux(Python 3) или Windows:
 
-Пример для отображения статистики для [HH.ru](https://hh.ru/):
-
-```bash
-$ python hhru.py
-```
-![img](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/e8c075bb-2c70-46cd-ba01-ecfb9d39b121)
-
-
-Пример для отображения статистики для [SuperJob.ru](https://www.superjob.ru/):
-
-```bash
-$ python sj.py
-```
-
-![img_1](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/741b3599-6d99-4982-b65c-bc04bf0f3402)
-
 Пример для отображения общей статистики:
 
 ```bash
