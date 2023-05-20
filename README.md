@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 #### Запуск на Linux(Python 3) или Windows:
 
-Пример для отображения статистики для HH.ru:
+Пример для отображения статистики для [HH.ru](https://hh.ru/):
 
 ```bash
 $ python hhru.py
@@ -33,7 +33,7 @@ $ python hhru.py
 ![img](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/e8c075bb-2c70-46cd-ba01-ecfb9d39b121)
 
 
-Пример для отображения статистики для SuperJob.ru:
+Пример для отображения статистики для [SuperJob.ru](https://www.superjob.ru/):
 
 ```bash
 $ python sj.py
@@ -50,4 +50,4 @@ $ python app_hh_and_sj.py
 ![img_3](https://github.com/Forluc/Stats_hhru_superjob/assets/75582238/a1fd39b9-027b-495f-9c0e-6ecc4876f602)
 
 ## Цель проекта
-Код был написан для удобства просмотра статистики вакансий HH.ru и SuperJob.ru
+Код был написан для удобства просмотра статистики вакансий [HH.ru](https://hh.ru/) и [SuperJob.ru](https://www.superjob.ru/)
