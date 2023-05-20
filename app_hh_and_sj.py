@@ -24,13 +24,16 @@ def get_statistics_sj(sj_secret_key, language, page=0):
         vacancies = response['objects']
         vacancies_found = response['total']
 
-        salaries_vacancies = [all_func.predict_rub_salary_for_superjob(vacancy) for vacancy in vacancies]
-        salaries.extend(salaries_vacancies)
+        vacancies_salaries = [all_func.predict_rub_salary_for_superjob(vacancy) for vacancy in vacancies]
+        salaries.extend(vacancies_salaries)
 
         page += 1
         more = response['more']
 
-    vacancies_processed, avg_salary = all_func.get_vac_proc_and_avg_salaries(salaries)
+    data_with_salary = list(filter(lambda x: x is not None, salaries))
+    vacancies_processed = len(data_with_salary)
+
+    avg_salary = all_func.get_avg_salaries(vacancies_processed, data_with_salary)
 
     return [language, vacancies_found, vacancies_processed, avg_salary]
 
@@ -55,12 +58,15 @@ def get_statistics_hh(language, page=0):
         language_vacancies = response['items']
         vacancies_found = response['found']
 
-        salaries_vacancies = [all_func.predict_rub_salary_for_hhru(vacancy) for vacancy in language_vacancies]
-        salaries.extend(salaries_vacancies)
+        vacancies_salaries = [all_func.predict_rub_salary_for_hhru(vacancy) for vacancy in language_vacancies]
+        salaries.extend(vacancies_salaries)
 
         page += 1
 
-    vacancies_processed, avg_salary = all_func.get_vac_proc_and_avg_salaries(salaries)
+    data_with_salary = list(filter(lambda x: x is not None, salaries))
+    vacancies_processed = len(data_with_salary)
+
+    avg_salary = all_func.get_avg_salaries(vacancies_processed, data_with_salary)
 
     return [language, vacancies_found, vacancies_processed, avg_salary]
 

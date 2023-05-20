@@ -27,16 +27,15 @@ def get_avg_salary(salary_from, salary_to):
         return (salary_from + salary_to) / 2
 
 
-def get_vac_proc_and_avg_salaries(salaries):
-    data_with_salary = list(filter(lambda x: x is not None, salaries))
-
-    vacancies_processed = len(data_with_salary)
+def get_avg_salaries(vacancies_processed, data_with_salary):
     if vacancies_processed:
         avg_salary = int(sum(data_with_salary) // vacancies_processed)
     else:
         avg_salary = 0
 
-    return vacancies_processed, avg_salary
+    return avg_salary
+
+
 
 
 def get_table(title, lang_stat):
